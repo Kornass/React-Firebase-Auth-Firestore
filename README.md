@@ -13,8 +13,6 @@ This is a project boilerplate for implementing sign up/in functionalities with F
 - React Router
 - useNavigate, useEffect and useState hooks
 
----
-
 ## Steps:
 
 1. Log in into your Google Account and go to [firebase.google.com](https://firebase.google.com/).
@@ -28,4 +26,4 @@ This is a project boilerplate for implementing sign up/in functionalities with F
 9. As an SDK we are importing firestore: _import {getFirestore} from ‘firebase/firestore’_
 10. export your db from config file: _export const db = getFirestore()_
     1. Code example snippet:
-       ![Config file snippet.](C:\Users\korna\OneDrive\Pulpit\firebaseconfig.jpg "firebase.config.js example")
+       ![Config file snippet.](./src/assets/firebaseconfig.jpg "firebase.config.js example")
