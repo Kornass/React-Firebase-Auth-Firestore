@@ -83,8 +83,12 @@ service cloud.firestore {
 8. Go to Index tab to create composite indexes.
    A composite index stores a sorted mapping of all the documents in a collection, based on an ordered list of fields to index. Cloud Firestore uses composite indexes to support queries not already supported by single-field indexes.
 
-| ---------- | :---------:|
-| bestSeller | Ascending |
+| bestSeller | Ascending  |
+| ---------- | ---------- |
+| timestamp  | Descending |
+
+| userRef   | Ascending  |
+| --------- | ---------- |
 | timestamp | Descending |
 
 ## Useful links:
