@@ -28,4 +28,4 @@ This is a project boilerplate for implementing sign up/in functionalities with F
 9. As an SDK we are importing firestore: _import {getFirestore} from ‘firebase/firestore’_
 10. export your db from config file: _export const db = getFirestore()_
     1. Code example snippet:
-       ![Config file snippet.](/assets/firebaseconfig.jpeg "firebase.config.js example")
+       ![Config file snippet.](C:\Users\korna\OneDrive\Pulpit\firebaseconfig.jpg "firebase.config.js example")
