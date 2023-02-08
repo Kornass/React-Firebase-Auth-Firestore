@@ -73,7 +73,7 @@ function SignUp({ setLoggedIn }) {
         <label>Name</label>
         <input onChange={handleChange} id="name" type="text" />
         <label>Email</label>
-        <input onChange={handleChange} id="email" type="text" />
+        <input onChange={handleChange} id="email" type="email" />
         <label>Password</label>
         <input onChange={handleChange} id="password" type="password" />
         <button type="submit">Sign up</button>

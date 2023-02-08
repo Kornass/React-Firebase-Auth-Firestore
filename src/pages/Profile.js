@@ -87,6 +87,7 @@ function Profile({ user }) {
       <button className="logout" onClick={onLogout}>
         Log out
       </button>
+
       <UserProducts user={user} />
     </div>
   );

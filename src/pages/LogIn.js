@@ -52,12 +52,16 @@ function LogIn({ setLoggedIn, setUser }) {
     <div className="userForm">
       <form className="form" onSubmit={onSubmit}>
         <label>Email</label>
-        <input onChange={handleChange} id="email" type="text" />
+        <input onChange={handleChange} id="email" type="email" />
         <label>Password</label>
         <input onChange={handleChange} id="password" type="password" />
         <button type="submit">Log in</button>
       </form>
+      <button className="forgotbtn" onClick={() => navigate("/forgotpass")}>
+        Forgot a Password!
+      </button>
       <p className="msg">{msg}</p>
+
       <GoogleAuth setUser={setUser} setMsg={setMsg} />
     </div>
   );

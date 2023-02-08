@@ -12,6 +12,7 @@ import SignUp from "./pages/SignUp";
 import LogIn from "./pages/LogIn";
 import AddProduct from "./pages/AddProduct";
 import Profile from "./pages/Profile";
+import ForgotPass from "./pages/ForgotPass";
 import { getAuth, onAuthStateChanged } from "firebase/auth";
 
 function App() {
@@ -47,6 +48,7 @@ function App() {
           path="/profile"
           element={loggedIn ? <Profile user={user} /> : <Navigate to="/" />}
         />
+        <Route path="/forgotpass" element={<ForgotPass />} />
       </Routes>
     </Router>
   );
