@@ -7,6 +7,7 @@ This is a project boilerplate for implementing sign up/in functionalities with F
 - Sign up and Log in with email and password
 - Sign up and Log in with Google pop-up
 - Logging out
+- Reseting a password - sending an email with a reset
 - Adding a documents to Firestore database
 - Fetching multiple documents from Firestore database
 - Managing forms in React
@@ -15,7 +16,7 @@ This is a project boilerplate for implementing sign up/in functionalities with F
 
 ## Steps:
 
-### Creating a project and setting authentication providers:
+#### Creating a project and setting authentication providers:
 
 1. Log in into your Google Account and go to [firebase.google.com](https://firebase.google.com/).
 2. Click 'Go to console'
@@ -38,6 +39,37 @@ This is a project boilerplate for implementing sign up/in functionalities with F
 14. In the authentication tab you should see the dashboard of all users that signed in to your app1
 15. _Add one_ user manually from the dashboard (as an example)
 
-### Creating Firestore database for our project:
+#### Creating Firestore database for our project:
 
-1.
+1. Go to _Firestore Database_ and create a new DB
+2. Choosing between production/test mode gives you different database rules (we can say settings) .For this repo we choose test mode
+3. Choose a location
+4. You should see your database dashboard
+5. Now we need to configure rules for our database. Rules are written in Common Expression Language (CEL). Cloud Firestore Security Rules allow you to control access to documents and collections in your database. You can write simple or complex rules that protect your app's data to the level of granularity that your specific app requires.
+6. Into the rules paste the following code :
+
+```
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Products
+    match /products/{products} {
+    	allow read;
+      allow create: if request.auth != null;
+    	allow delete: if resource.data.userRef == request.auth.uid;
+    }
+
+    // Users
+    match /users/{user} {
+    	allow read;
+    	allow create;
+    	allow update: if request.auth.uid == user
+    }
+  }
+}
+
+```
+
+## Useful links:
+
+-[Get Started](https://firebase.google.com/docs/auth/web/start) -[Adding user to the Firestore](https://firebase.google.com/docs/firestore/manage-data/add-data) -[Adding data to the Firestore](https://firebase.google.com/docs/firestore/manage-data/add-data) -[Fetching data from Firestore](https://firebase.google.com/docs/firestore/query-data/get-data#get_a_document)
