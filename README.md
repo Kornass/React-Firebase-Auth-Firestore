@@ -71,7 +71,21 @@ service cloud.firestore {
 ```
 
 7. Now let's add a example document in your products collection:
-   1.Start collection in Firestore, then create 1. name-string 2. price-number 3. description-string 4. bestSeller-boolean 5. timestamp → current timestamp 6. userRef-string → grab a user id (uid) from authentication tab (to create a user reference)
+   1.Start collection in Firestore, then create
+
+   1. name-string
+   2. price-number
+   3. description-string
+   4. bestSeller-boolean
+   5. timestamp → current timestamp
+   6. userRef-string → grab a user id (uid) from authentication tab (to create a user reference)
+
+8. Go to Index tab to create composite indexes.
+   A composite index stores a sorted mapping of all the documents in a collection, based on an ordered list of fields to index. Cloud Firestore uses composite indexes to support queries not already supported by single-field indexes.
+
+| ---------- | :---------:|
+| bestSeller | Ascending |
+| timestamp | Descending |
 
 ## Useful links:
 
