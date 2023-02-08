@@ -70,6 +70,12 @@ service cloud.firestore {
 
 ```
 
+7. Now let's add a example document in your products collection:
+   1.Start collection in Firestore, then create 1. name-string 2. price-number 3. description-string 4. bestSeller-boolean 5. timestamp → current timestamp 6. userRef-string → grab a user id (uid) from authentication tab (to create a user reference)
+
 ## Useful links:
 
--[Get Started](https://firebase.google.com/docs/auth/web/start) -[Adding user to the Firestore](https://firebase.google.com/docs/firestore/manage-data/add-data) -[Adding data to the Firestore](https://firebase.google.com/docs/firestore/manage-data/add-data) -[Fetching data from Firestore](https://firebase.google.com/docs/firestore/query-data/get-data#get_a_document)
+- [Get Started](https://firebase.google.com/docs/auth/web/start)
+- [Adding user to the Firestore](https://firebase.google.com/docs/firestore/manage-data/add-data)
+- [Adding data to the Firestore](https://firebase.google.com/docs/firestore/manage-data/add-data)
+- [Fetching data from Firestore](https://firebase.google.com/docs/firestore/query-data/get-data#get_a_document)
